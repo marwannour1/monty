@@ -47,11 +47,11 @@ extern stack_t * head;
 typedef void( * op_func)(stack_t ** , unsigned int);
 
 
-void open_file(char * file_name);
-int parse_line(char * buffer, int line_number, int format);
-void read_file(FILE * );
-int len_chars(FILE * );
-void find_func(char * , char * , int, int);
+void openFile(char * file_name);
+int seprateLine(char * buffer, int line_number, int format);
+void readFile(FILE * );
+int lengthChars(FILE * );
+void findfunction(char * , char * , int, int);
 
 
 stack_t *addNode(int n);
@@ -60,12 +60,12 @@ void printStack(stack_t ** , unsigned int);
 void addToStack(stack_t ** , unsigned int);
 void addToQueue(stack_t ** , unsigned int);
 
-void callFun(op_func, char * , char * , int, int);
+void callFunction(op_func, char * , char * , int, int);
 
-void print_top(stack_t ** , unsigned int);
-void pop_top(stack_t ** , unsigned int);
+void printTop(stack_t ** , unsigned int);
+void popTop(stack_t ** , unsigned int);
 void nop(stack_t ** , unsigned int);
-void swap_nodes(stack_t ** , unsigned int);
+void swapNodes(stack_t ** , unsigned int);
 
 
 void addNodes(stack_t ** , unsigned int);
@@ -75,14 +75,14 @@ void mulNodes(stack_t ** , unsigned int);
 void modNodes(stack_t ** , unsigned int);
 
 
-void print_char(stack_t ** , unsigned int);
-void print_str(stack_t ** , unsigned int);
-void rotl(stack_t ** , unsigned int);
+void printChar(stack_t ** , unsigned int);
+void printStr(stack_t ** , unsigned int);
+void rotateFirstBottom((stack_t ** , unsigned int);
 
 
-void err(int error_code, ...);
-void more_err(int error_code, ...);
-void string_err(int error_code, ...);
-void rotr(stack_t ** , unsigned int);
+void error(int error_code, ...);
+void error2(int error_code, ...);
+void stringError(int error_code, ...);
+void rotateLastTop(stack_t ** , unsigned int);
 
 #endif
