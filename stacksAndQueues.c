@@ -12,7 +12,7 @@ stack_t *createNode(int n)
 
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
-		error(4);
+		err(4);
 	node->next = NULL;
 	node->prev = NULL;
 	node->n = n;
