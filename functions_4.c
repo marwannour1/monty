@@ -80,11 +80,11 @@ void findFunction(char * opcode, char * value, int ln, int format) {
     instruction_t func_list[] = {
         {
             "push",
-            add_to_stack
+            addToStack
         },
         {
             "pall",
-            print_stack
+            printStack
         },
         {
             "pint",
@@ -104,23 +104,23 @@ void findFunction(char * opcode, char * value, int ln, int format) {
         },
         {
             "add",
-            add_nodes
+            addNodes
         },
         {
             "sub",
-            sub_nodes
+            subNodes
         },
         {
             "div",
-            div_nodes
+            divNodes
         },
         {
             "mul",
-            mul_nodes
+            mulNodes
         },
         {
             "mod",
-            mod_nodes
+            modNodes
         },
         {
             "pchar",
@@ -183,11 +183,11 @@ void callFunction(op_func func, char * op, char * val, int ln, int format) {
             if (isdigit(val[i]) == 0)
                 err(5, ln);
         }
-        node = create_node(atoi(val) * flag);
+        node = createNode(atoi(val) * flag);
         if (format == 0)
             func( & node, ln);
         if (format == 1)
-            add_to_queue( & node, ln);
+            addToQueue( & node, ln);
     } else
         func( & head, ln);
 }

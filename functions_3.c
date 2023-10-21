@@ -40,7 +40,7 @@ void error(int error_code, ...) {
     default:
         break;
     }
-    free_nodes();
+    freeNodes();
     exit(EXIT_FAILURE);
 }
 
@@ -79,7 +79,7 @@ void error2(int error_code, ...) {
     default:
         break;
     }
-    free_nodes();
+    freeNodes();
     exit(EXIT_FAILURE);
 }
 
@@ -105,6 +105,6 @@ void stringError(int error_code, ...) {
     default:
         break;
     }
-    free_nodes();
+    freeNodes();
     exit(EXIT_FAILURE);
 }

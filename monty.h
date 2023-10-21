@@ -77,7 +77,7 @@ void modNodes(stack_t ** , unsigned int);
 
 void printChar(stack_t ** , unsigned int);
 void printStr(stack_t ** , unsigned int);
-void rotateFirstBottom((stack_t ** , unsigned int);
+void rotateFirstBottom(stack_t ** , unsigned int);
 
 
 void error(int error_code, ...);
