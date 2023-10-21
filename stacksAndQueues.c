@@ -12,7 +12,7 @@ stack_t *createNode(int n)
 
 	node = malloc(sizeof(stack_t));
 	if (node == NULL)
-		err(4);
+		error(4);
 	node->next = NULL;
 	node->prev = NULL;
 	node->n = n;
@@ -45,8 +45,8 @@ void freeNodes(void)
 void addToQueue(stack_t **newNode, unsigned int lineNumber)
 {
 	stack_t *tmp;
-    (void)lineNumber;
-
+    	(void)lineNumber;
+	
 	if (newNode == NULL || *newNode == NULL)
 		exit(EXIT_FAILURE);
 	if (head == NULL)
@@ -72,6 +72,8 @@ void addToStack(stack_t **newNode, unsigned int lineNumber)
 {
 	stack_t *tmp;
 
+	(void)lineNumber;
+
 	if (newNode == NULL || *newNode == NULL)
 		exit(EXIT_FAILURE);
 	if (head == NULL)
@@ -86,11 +88,11 @@ void addToStack(stack_t **newNode, unsigned int lineNumber)
 }
 
 /**
- * print_stack - prints the stack.
+ * printStack - prints the stack.
  * @stack: Pointer to a pointer pointing to top node.
  * @line_number: line number for error.
  */
-void print_stack(stack_t **stack, unsigned int line_number)
+void printStack(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 

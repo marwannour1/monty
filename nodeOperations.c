@@ -10,7 +10,7 @@ void addNodes(stack_t **stack, unsigned int lineNumber)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, lineNumber, "add");
+		error2(8, lineNumber, "add");
 
 	*stack = (*stack)->next;
 	sum = (*stack)->n + (*stack)->prev->n;
@@ -31,7 +31,7 @@ void subNodes(stack_t **stack, unsigned int lineNumber)
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 
-		more_err(8, lineNumber, "sub");
+		error2(8, lineNumber, "sub");
 
 
 	*stack = (*stack)->next;
@@ -46,15 +46,15 @@ void subNodes(stack_t **stack, unsigned int lineNumber)
  * @stack: Pointer to a pointer to a pointing to top node
  * @lineNumber: Interger representing the line number of error.
  */
-void div_nodes(stack_t **stack, unsigned int lineNumber)
+void divNodes(stack_t **stack, unsigned int lineNumber)
 {
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, lineNumber, "div");
+		error2(8, lineNumber, "div");
 
 	if ((*stack)->n == 0)
-		more_err(9, lineNumber);
+		error2(9, lineNumber);
 	(*stack) = (*stack)->next;
 	sum = (*stack)->n / (*stack)->prev->n;
 	(*stack)->n = sum;
@@ -91,7 +91,7 @@ void modNodes(stack_t **stack, unsigned int lineNumber)
 	int sum;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, lineNumber, "mod");
+		error2(8, lineNumber, "mod");
 
 	if ((*stack)->n == 0)
 		error2(9, lineNumber);
