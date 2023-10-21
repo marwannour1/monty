@@ -10,7 +10,7 @@ void openFile(char * file_name) {
     FILE * fd = fopen(file_name, "r");
 
     if (file_name == NULL || fd == NULL)
-        err(2, file_name);
+        error(2, file_name);
 
     readFile(fd);
     fclose(fd);
