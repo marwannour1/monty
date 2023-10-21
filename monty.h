@@ -51,10 +51,10 @@ void openFile(char * file_name);
 int seprateLine(char * buffer, int line_number, int format);
 void readFile(FILE * );
 int lengthChars(FILE * );
-void findfunction(char * , char * , int, int);
+void findFunction(char * , char * , int, int);
 
 
-stack_t *addNode(int n);
+stack_t *createNode(int n);
 void freeNodes(void);
 void printStack(stack_t ** , unsigned int);
 void addToStack(stack_t ** , unsigned int);
